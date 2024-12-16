@@ -1,10 +1,15 @@
+// Report5.java
 public class Report5 {
 	public static void main(String[] args) {
-		String str = null;
+		// 条件1
+		String str = "壱百満";
 		try {
-			System.out.println(str.length());
-		} catch (NullPointerException e) {
-			System.out.println("NullPointerExceptionが発生しました。");
+			// 条件2: Integer.parseIntを使用
+			int value = Integer.parseInt(str);
+			System.out.println(value);
+		} catch (NumberFormatException e) {
+			// 例外発生時の処理
+			System.out.println("NumberFormatExceptionが発生しました。");
 			System.out.println("エラーメッセージ: " + e.getMessage());
 		}
 	}
